@@ -19,13 +19,14 @@ var prodcutService = application.NewProductService(productDb)
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "hexagonal-example",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "A simple application meant to demonstrate an use case of hexagonal architecture",
+	Long: `
+Hexagonal architecture strives to maintain the core of an application uncoupled from 
+the methods of acessing the core application
+	
+in this case specifically, this cli tool is able to create, view, enable and disable a
+product using the same core code as a different tool that does the same via a web server,
+thus ensuring the same behavior accross different methods`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
